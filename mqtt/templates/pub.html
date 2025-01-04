@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <form method="POST" action="/mqtt/publish">
+            {% csrf_token %}
+            topic : <select name="topic">
+                <option value="test/topic">옵션1</option>
+                <option value="test/topic">옵션2</option>
+            </select><br>
+            message: <input type ="text" name= "message">
+            <input type = "submit" value = "publish">
+        </form>
+    </body>
+</html>
